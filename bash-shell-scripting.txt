@@ -1,0 +1,8 @@
+#!/bin/bash (shebang)
+chmod u+x myscript # u=user, x=executable, myscript=bash-script
+./myscript # execute bash-script
+# (comment) # tidak dieksekusi saat program dijalankan
+echo "hello" # menampilkan nilai dari variabel ke layar
+printf
+variable=value # mendeklarasikan serta melakukan inisialiasi pada variabel
+$variable # menggunakan variabel

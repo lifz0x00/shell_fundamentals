@@ -1,0 +1,89 @@
+ACCESS-LEVEL
+$ adalah user
+# adalah root
+
+@PATH
+/bin berisi file yang dapat dieksekusi yang merupakan bagian dari inti sistem operasi. File-file bin ini harus dapat diakses sebelum /usr dipasang. (misalnya, mount perintahnya ada di /bin/mount)
+/usr/bin berisi file yang dapat dieksekusi yang bukan bagian dari inti sistem operasi. dianggap sebagai rumah dari "binari seluruh sistem"
+flow: /bin -> /usr/bin /sbin -> /usr/sbin /usr/tmp -> /var/tmp
+
+@SHORTCUT
+[Tab] Auto Completion
+[Ctrl + a] menggeser kursor ke awal perintah
+[Ctrl + e] menggeser kursor ke akhir perintah
+[Ctrl + f] menggeser kursor ke kanan satu karakter
+[Ctrl + b] menggeser kursor ke kiri satu karakter
+[Ctrl + k] menghapus semua karakter setelah kursor
+[Ctrl + u] menghapus semua karakter sebelum kursor
+[Ctrl + d] menghapus karakter di depan kursor
+[Ctrl + c] menghentikan perintah yang sedang berjalan
+[Ctrl + z] menjeda perintah yang sedang berjalan diforeground
+
+@DAILY-COMMANDS
+help "menampilkan versi bash yang digunakan, dan daftar perintah yang tersedia di bash"
+nano (text editor)
+cd (change directory)
+cp (copy)
+ls (list)
+mkdir (make directory)
+mv (move)
+pwd (present working directory)
+rm (remove)
+cat # menampilkan isi file
+tail # menampilkan bagian akhir file
+grep # mencari string pada file
+find # mencari file pada direktori saat ini
+locate # mencari file diseluruh sistem
+tar (tape archive) # mengkompres file
+gzip (GNU Zip) # mengkompres file yang sudah dikompres
+whereis # mengetahui lokasi perintah 
+which # mengetahui lokasi perintah yang akan dijalankan
+history # menampilkan semua daftar perintah yang dijalankan
+chsh # mengubah shell default
+echo # melihat isi dari variabel
+alias <alias>=<command> # shortcut untuk perintah yang sering digunakan
+wc # menghitung jumlah kata, baris, dan karakter dalam file
+ps # melihat daftar proses yang sedang berjalan
+
+@OPERATORS
+| (pipe) # menggabungkan perintah
+!<value> # membalikan perintah
+-[parameter] # 
+; (semicolon) # menjalankan perintah setelah perintah lain  
+&& (AND) # jika kedua perintah berhasil, kedua perintah dijalankan 
+|| (OR) # jika perintah pertama gagal, perintah kedua berhasil maka perintah kedua dijalankan
+{} # pengelompokan pada file dan folder
+< (input) # menerima input
+> (output) # mengarahkan output
+* (wildcard) # mengambil serta memanipulasi semua character yang diawali dengan x suatu file/folder
+
+/etc/profile # pengaturan konfigurasi seluruh sistem
+~/.bashrc # non-login shell (login by desktop)
+~/.bash_profile # login shell (login by system/server) dan dibaca terlebih dahulu
+~/.bash_login # login shell (login by system/server) dan dibaca setelah .bash_profile
+~/.profile # login shell (login by system/server) dan dibaca jika .bash_profile tidak ada
+
+@VARIABLE
+$HOME # home folder pengguna
+$PATH # path yang bisa di akses oleh program
+$SHELL # shell yang sedang dijalankan
+$USER # nama pengguna
+
+0> <file> (std input)	
+1> <file> (std output)	
+2> <file> (std error)	
+&> <file> (std output & std error) 
+
+@PROCESSES
+top # melihat daftar proses yang sedang berjalan secara real-time
+<cmd> & # menjalankan perintah dibackground
+jobs # daftar perintah yang sedang berjalan
+fg %n (foreground) #  melihat job yang sedang berjalan dibackground
+bg %n (background) # mengembalikan job ke background
+kill <PID>
+killall 
+
+
+@PERMISSIONS
+chmod (change modification)
+chown (change owner)
